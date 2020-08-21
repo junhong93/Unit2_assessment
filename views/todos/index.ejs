@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Unit 2 Assessment</title>
+</head>
+
+<body>
+    <h1>To Do List</h1>
+    <ul>
+        <% todos.forEach(function(t, id) { %>
+        <li>
+            <%= t.todo %>
+            -
+            <%= t.done ? 'done' : 'not done' %>
+        </li>
+        <% }); %>
+    </ul>
+
+    <hr>
+    <form action='/todos/addingList' method="POST">
+        <input type="text" name="AddToDo">
+        <button type='submit'>ADD TO DO</button>
+    </form>
+</body>
+
+</html>
